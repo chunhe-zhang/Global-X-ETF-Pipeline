@@ -9,32 +9,10 @@
         "dependsOn": [],
         "userProperties": [],
         "typeProperties": {
-          "items": [
-            {
-              "ticker": "AAPP",
-              "relativeUrl": "/product/aapp"
-            },
-            {
-              "ticker": "AMZP",
-              "relativeUrl": "/product/amzp"
-            },
-            {
-              "ticker": "GOOP",
-              "relativeUrl": "/product/goop"
-            },
-            {
-              "ticker": "NVDP",
-              "relativeUrl": "/product/nvdp"
-            },
-            {
-              "ticker": "SPCP",
-              "relativeUrl": "/product/spcp"
-            },
-            {
-              "ticker": "TSLP",
-              "relativeUrl": "/product/tslp"
-            }
-          ],
+          "items": {
+            "value": "@json('[{\"ticker\":\"AAPP\",\"relativeUrl\":\"/product/aapp\"},{\"ticker\":\"AMZP\",\"relativeUrl\":\"/product/amzp\"},{\"ticker\":\"GOOP\",\"relativeUrl\":\"/product/goop\"},{\"ticker\":\"NVDP\",\"relativeUrl\":\"/product/nvdp\"},{\"ticker\":\"SPCP\",\"relativeUrl\":\"/product/spcp\"},{\"ticker\":\"TSLP\",\"relativeUrl\":\"/product/tslp\"}]')",
+            "type": "Expression"
+          },
           "isSequential": true,
           "activities": [
             {
@@ -52,16 +30,11 @@
               "typeProperties": {
                 "source": {
                   "type": "BinarySource",
-                  "storeSettings": {
-                    "type": "HttpReadSettings",
-                    "requestMethod": "GET"
-                  }
+                  "storeSettings": { "type": "HttpReadSettings", "requestMethod": "GET" }
                 },
                 "sink": {
                   "type": "BinarySink",
-                  "storeSettings": {
-                    "type": "AzureBlobFSWriteSettings"
-                  }
+                  "storeSettings": { "type": "AzureBlobFSWriteSettings" }
                 },
                 "enableStaging": false
               },
@@ -69,9 +42,7 @@
                 {
                   "referenceName": "ds_http_globalx_binary",
                   "type": "DatasetReference",
-                  "parameters": {
-                    "relativeUrl": "@item().relativeUrl"
-                  }
+                  "parameters": { "relativeUrl": "@item().relativeUrl" }
                 }
               ],
               "outputs": [
@@ -90,10 +61,6 @@
       }
     ],
     "parameters": {},
-    "annotations": [
-      "globalx",
-      "bronze",
-      "http-copy"
-    ]
+    "annotations": ["globalx", "bronze", "http-copy"]
   }
 }
