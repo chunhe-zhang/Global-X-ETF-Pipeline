@@ -19,7 +19,7 @@ This is a broad public snapshot, not a complete Global X master list. Canada’s
 
 ## Holdings coverage and look-through method
 
-The Azure pipeline currently ingests raw HTML for AAPP, AMZP, GOOP, NVDP, SPCP, and TSLP into the private `bronze` container. A best-effort HTML parser and recursive calculator are included in the code. **The Azure Function and the parsing/ADF refresh step are not yet deployed**, so the current website has a clearly marked illustrative AAPP example and catalog-only statuses for other entries.
+The Azure pipeline currently ingests raw HTML for AAPP, AMZP, GOOP, NVDP, SPCP, and TSLP into the private `bronze` container. The new Function collector supports the official full-holdings download or public holdings table and has a two-pass ADF template for all 224 catalog entries. Official product-page routes are mapped for US (116), Australia (53), Brazil (38), Colombia (2), Hong Kong (9), and Canada (6); AU and Brazil use the official funds-page URL pattern and Hong Kong uses links from its official fund list. **The Function and refresh template remain code only until deployed and run in Azure.** Some public pages may lack downloadable full holdings or may not parse; those rows remain unavailable rather than fabricated.
 
 Holdings are normalized as rows with a security ticker and weight percentage of parent NAV. For a nested ETF, exposure is multiplied down the path; repeated underlying securities are aggregated. Weights above 100% remain intact (for example, 133.54% is represented as 1.3354×). Cycles and unavailable fund holdings are reported as unresolved instead of guessed.
 
@@ -41,7 +41,7 @@ logical silver normalized holdings -> gold look-through JSON
 GitHub Pages website
 ```
 
-The existing ADF pipeline is `pl_globalx_ingest`; its system-assigned managed identity is scoped to the `bronze` container. The next pipeline template and Azure Function code are in `adf/` and the repository root. They require a Function App deployment, narrowly scoped Function managed identity access to bronze, and ADF secure key wiring before live results are served.
+The existing ADF pipeline is `pl_globalx_ingest`; its system-assigned managed identity is scoped to the `bronze` container. The multi-region pipeline template is `adf/pipeline_globalx_refresh.json`; deployment guidance is in `adf/PUBLIC_HOLDINGS_REFRESH.md`. These require a Function App deployment, narrowly scoped Function managed identity access to bronze, and ADF secure key wiring before live results are served.
 
 ## Website
 

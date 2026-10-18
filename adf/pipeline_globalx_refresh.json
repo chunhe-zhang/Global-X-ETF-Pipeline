@@ -1,30 +1,1000 @@
 {
-  "name": "pl_globalx_lookthrough_refresh_template",
+  "name": "pl_globalx_public_holdings_refresh_template",
   "properties": {
     "parameters": {
-      "functionBaseUrl": {"type": "String"},
-      "functionKey": {"type": "SecureString"}
+      "functionBaseUrl": {
+        "type": "String"
+      },
+      "functionKey": {
+        "type": "SecureString"
+      },
+      "products": {
+        "type": "Array",
+        "defaultValue": [
+          {
+            "region": "US",
+            "ticker": "ACHP"
+          },
+          {
+            "region": "US",
+            "ticker": "AGNG"
+          },
+          {
+            "region": "US",
+            "ticker": "AIQ"
+          },
+          {
+            "region": "US",
+            "ticker": "ALTY"
+          },
+          {
+            "region": "US",
+            "ticker": "AQWA"
+          },
+          {
+            "region": "US",
+            "ticker": "ARGT"
+          },
+          {
+            "region": "US",
+            "ticker": "ASEA"
+          },
+          {
+            "region": "US",
+            "ticker": "AUAU"
+          },
+          {
+            "region": "US",
+            "ticker": "AUSF"
+          },
+          {
+            "region": "US",
+            "ticker": "BCCC"
+          },
+          {
+            "region": "US",
+            "ticker": "BITS"
+          },
+          {
+            "region": "US",
+            "ticker": "BKCH"
+          },
+          {
+            "region": "US",
+            "ticker": "BOTZ"
+          },
+          {
+            "region": "US",
+            "ticker": "BRAZ"
+          },
+          {
+            "region": "US",
+            "ticker": "BUG"
+          },
+          {
+            "region": "US",
+            "ticker": "CATH"
+          },
+          {
+            "region": "US",
+            "ticker": "CEFA"
+          },
+          {
+            "region": "US",
+            "ticker": "CHIQ"
+          },
+          {
+            "region": "US",
+            "ticker": "CHPX"
+          },
+          {
+            "region": "US",
+            "ticker": "CHRI"
+          },
+          {
+            "region": "US",
+            "ticker": "CLIP"
+          },
+          {
+            "region": "US",
+            "ticker": "CLOU"
+          },
+          {
+            "region": "US",
+            "ticker": "COLO"
+          },
+          {
+            "region": "US",
+            "ticker": "COMD"
+          },
+          {
+            "region": "US",
+            "ticker": "COPX"
+          },
+          {
+            "region": "US",
+            "ticker": "CPTL"
+          },
+          {
+            "region": "US",
+            "ticker": "CTEC"
+          },
+          {
+            "region": "US",
+            "ticker": "DAX"
+          },
+          {
+            "region": "US",
+            "ticker": "DIV"
+          },
+          {
+            "region": "US",
+            "ticker": "DJIA"
+          },
+          {
+            "region": "US",
+            "ticker": "DRIV"
+          },
+          {
+            "region": "US",
+            "ticker": "DTCR"
+          },
+          {
+            "region": "US",
+            "ticker": "DYLG"
+          },
+          {
+            "region": "US",
+            "ticker": "EART"
+          },
+          {
+            "region": "US",
+            "ticker": "EBIZ"
+          },
+          {
+            "region": "US",
+            "ticker": "EDGQ"
+          },
+          {
+            "region": "US",
+            "ticker": "EDGX"
+          },
+          {
+            "region": "US",
+            "ticker": "EFAS"
+          },
+          {
+            "region": "US",
+            "ticker": "EGLE"
+          },
+          {
+            "region": "US",
+            "ticker": "EHCC"
+          },
+          {
+            "region": "US",
+            "ticker": "EMBD"
+          },
+          {
+            "region": "US",
+            "ticker": "EMC"
+          },
+          {
+            "region": "US",
+            "ticker": "EMM"
+          },
+          {
+            "region": "US",
+            "ticker": "FINX"
+          },
+          {
+            "region": "US",
+            "ticker": "FLAG"
+          },
+          {
+            "region": "US",
+            "ticker": "FLOW"
+          },
+          {
+            "region": "US",
+            "ticker": "GNOM"
+          },
+          {
+            "region": "US",
+            "ticker": "GOEX"
+          },
+          {
+            "region": "US",
+            "ticker": "GREK"
+          },
+          {
+            "region": "US",
+            "ticker": "GURU"
+          },
+          {
+            "region": "US",
+            "ticker": "GXDW"
+          },
+          {
+            "region": "US",
+            "ticker": "GXIG"
+          },
+          {
+            "region": "US",
+            "ticker": "GXLC"
+          },
+          {
+            "region": "US",
+            "ticker": "GXPC"
+          },
+          {
+            "region": "US",
+            "ticker": "GXPD"
+          },
+          {
+            "region": "US",
+            "ticker": "GXPE"
+          },
+          {
+            "region": "US",
+            "ticker": "GXPS"
+          },
+          {
+            "region": "US",
+            "ticker": "GXPT"
+          },
+          {
+            "region": "US",
+            "ticker": "HEAL"
+          },
+          {
+            "region": "US",
+            "ticker": "HERO"
+          },
+          {
+            "region": "US",
+            "ticker": "HYDR"
+          },
+          {
+            "region": "US",
+            "ticker": "IPAV"
+          },
+          {
+            "region": "US",
+            "ticker": "KROP"
+          },
+          {
+            "region": "US",
+            "ticker": "LIT"
+          },
+          {
+            "region": "US",
+            "ticker": "LLDR"
+          },
+          {
+            "region": "US",
+            "ticker": "LLMA"
+          },
+          {
+            "region": "US",
+            "ticker": "LNGX"
+          },
+          {
+            "region": "US",
+            "ticker": "MILN"
+          },
+          {
+            "region": "US",
+            "ticker": "MLCC"
+          },
+          {
+            "region": "US",
+            "ticker": "MLDR"
+          },
+          {
+            "region": "US",
+            "ticker": "MLPA"
+          },
+          {
+            "region": "US",
+            "ticker": "MLPD"
+          },
+          {
+            "region": "US",
+            "ticker": "MLPX"
+          },
+          {
+            "region": "US",
+            "ticker": "NDIA"
+          },
+          {
+            "region": "US",
+            "ticker": "NORW"
+          },
+          {
+            "region": "US",
+            "ticker": "NYSX"
+          },
+          {
+            "region": "US",
+            "ticker": "ONOF"
+          },
+          {
+            "region": "US",
+            "ticker": "ORBX"
+          },
+          {
+            "region": "US",
+            "ticker": "PAVE"
+          },
+          {
+            "region": "US",
+            "ticker": "PFFD"
+          },
+          {
+            "region": "US",
+            "ticker": "PFFV"
+          },
+          {
+            "region": "US",
+            "ticker": "QDIV"
+          },
+          {
+            "region": "US",
+            "ticker": "QRMI"
+          },
+          {
+            "region": "US",
+            "ticker": "QTR"
+          },
+          {
+            "region": "US",
+            "ticker": "QYLD"
+          },
+          {
+            "region": "US",
+            "ticker": "QYLG"
+          },
+          {
+            "region": "US",
+            "ticker": "RMHY"
+          },
+          {
+            "region": "US",
+            "ticker": "RNRG"
+          },
+          {
+            "region": "US",
+            "ticker": "RSSL"
+          },
+          {
+            "region": "US",
+            "ticker": "RYLD"
+          },
+          {
+            "region": "US",
+            "ticker": "RYLG"
+          },
+          {
+            "region": "US",
+            "ticker": "SDEM"
+          },
+          {
+            "region": "US",
+            "ticker": "SDIV"
+          },
+          {
+            "region": "US",
+            "ticker": "SHLD"
+          },
+          {
+            "region": "US",
+            "ticker": "SIL"
+          },
+          {
+            "region": "US",
+            "ticker": "SLDR"
+          },
+          {
+            "region": "US",
+            "ticker": "SMRZ"
+          },
+          {
+            "region": "US",
+            "ticker": "SNSR"
+          },
+          {
+            "region": "US",
+            "ticker": "SOCL"
+          },
+          {
+            "region": "US",
+            "ticker": "SPFF"
+          },
+          {
+            "region": "US",
+            "ticker": "SRET"
+          },
+          {
+            "region": "US",
+            "ticker": "TLTX"
+          },
+          {
+            "region": "US",
+            "ticker": "TYLG"
+          },
+          {
+            "region": "US",
+            "ticker": "URA"
+          },
+          {
+            "region": "US",
+            "ticker": "VNAM"
+          },
+          {
+            "region": "US",
+            "ticker": "XRMI"
+          },
+          {
+            "region": "US",
+            "ticker": "XTR"
+          },
+          {
+            "region": "US",
+            "ticker": "XYLD"
+          },
+          {
+            "region": "US",
+            "ticker": "XYLG"
+          },
+          {
+            "region": "US",
+            "ticker": "ZAP"
+          },
+          {
+            "region": "US",
+            "ticker": "ZCBA"
+          },
+          {
+            "region": "US",
+            "ticker": "ZCBB"
+          },
+          {
+            "region": "US",
+            "ticker": "ZCBC"
+          },
+          {
+            "region": "US",
+            "ticker": "ZCBE"
+          },
+          {
+            "region": "US",
+            "ticker": "ZCBF"
+          },
+          {
+            "region": "US",
+            "ticker": "ZCBG"
+          },
+          {
+            "region": "AU",
+            "ticker": "A300"
+          },
+          {
+            "region": "AU",
+            "ticker": "ACDC"
+          },
+          {
+            "region": "AU",
+            "ticker": "AINF"
+          },
+          {
+            "region": "AU",
+            "ticker": "ATOM"
+          },
+          {
+            "region": "AU",
+            "ticker": "AYLD"
+          },
+          {
+            "region": "AU",
+            "ticker": "BANK"
+          },
+          {
+            "region": "AU",
+            "ticker": "BCOM"
+          },
+          {
+            "region": "AU",
+            "ticker": "BUGG"
+          },
+          {
+            "region": "AU",
+            "ticker": "CURE"
+          },
+          {
+            "region": "AU",
+            "ticker": "DRGN"
+          },
+          {
+            "region": "AU",
+            "ticker": "DTEC"
+          },
+          {
+            "region": "AU",
+            "ticker": "EBTC"
+          },
+          {
+            "region": "AU",
+            "ticker": "EETH"
+          },
+          {
+            "region": "AU",
+            "ticker": "ESTX"
+          },
+          {
+            "region": "AU",
+            "ticker": "ETPMAG"
+          },
+          {
+            "region": "AU",
+            "ticker": "ETPMPD"
+          },
+          {
+            "region": "AU",
+            "ticker": "ETPMPM"
+          },
+          {
+            "region": "AU",
+            "ticker": "ETPMPT"
+          },
+          {
+            "region": "AU",
+            "ticker": "FANG"
+          },
+          {
+            "region": "AU",
+            "ticker": "FHNG"
+          },
+          {
+            "region": "AU",
+            "ticker": "FTEC"
+          },
+          {
+            "region": "AU",
+            "ticker": "GARP"
+          },
+          {
+            "region": "AU",
+            "ticker": "GHLD"
+          },
+          {
+            "region": "AU",
+            "ticker": "GHRP"
+          },
+          {
+            "region": "AU",
+            "ticker": "GMTL"
+          },
+          {
+            "region": "AU",
+            "ticker": "GOLD"
+          },
+          {
+            "region": "AU",
+            "ticker": "GRPA"
+          },
+          {
+            "region": "AU",
+            "ticker": "GXAI"
+          },
+          {
+            "region": "AU",
+            "ticker": "GXLD"
+          },
+          {
+            "region": "AU",
+            "ticker": "HGEN"
+          },
+          {
+            "region": "AU",
+            "ticker": "HMND"
+          },
+          {
+            "region": "AU",
+            "ticker": "ISMD"
+          },
+          {
+            "region": "AU",
+            "ticker": "J100"
+          },
+          {
+            "region": "AU",
+            "ticker": "LNAS"
+          },
+          {
+            "region": "AU",
+            "ticker": "MOON"
+          },
+          {
+            "region": "AU",
+            "ticker": "NDIA"
+          },
+          {
+            "region": "AU",
+            "ticker": "OZXX"
+          },
+          {
+            "region": "AU",
+            "ticker": "PAVE"
+          },
+          {
+            "region": "AU",
+            "ticker": "QYLD"
+          },
+          {
+            "region": "AU",
+            "ticker": "ROBO"
+          },
+          {
+            "region": "AU",
+            "ticker": "RSSL"
+          },
+          {
+            "region": "AU",
+            "ticker": "SEMI"
+          },
+          {
+            "region": "AU",
+            "ticker": "SLVM"
+          },
+          {
+            "region": "AU",
+            "ticker": "SNAS"
+          },
+          {
+            "region": "AU",
+            "ticker": "TECH"
+          },
+          {
+            "region": "AU",
+            "ticker": "U100"
+          },
+          {
+            "region": "AU",
+            "ticker": "USHY"
+          },
+          {
+            "region": "AU",
+            "ticker": "USIG"
+          },
+          {
+            "region": "AU",
+            "ticker": "USTB"
+          },
+          {
+            "region": "AU",
+            "ticker": "UYLD"
+          },
+          {
+            "region": "AU",
+            "ticker": "WIRE"
+          },
+          {
+            "region": "AU",
+            "ticker": "ZYAU"
+          },
+          {
+            "region": "AU",
+            "ticker": "ZYUS"
+          },
+          {
+            "region": "BR",
+            "ticker": "CHPX"
+          },
+          {
+            "region": "BR",
+            "ticker": "ORBX"
+          },
+          {
+            "region": "BR",
+            "ticker": "EART"
+          },
+          {
+            "region": "BR",
+            "ticker": "COLO"
+          },
+          {
+            "region": "BR",
+            "ticker": "SHLD"
+          },
+          {
+            "region": "BR",
+            "ticker": "GOEX"
+          },
+          {
+            "region": "BR",
+            "ticker": "DTCR"
+          },
+          {
+            "region": "BR",
+            "ticker": "RSSL"
+          },
+          {
+            "region": "BR",
+            "ticker": "ARGT"
+          },
+          {
+            "region": "BR",
+            "ticker": "CLIP"
+          },
+          {
+            "region": "BR",
+            "ticker": "AIQ"
+          },
+          {
+            "region": "BR",
+            "ticker": "PFFV"
+          },
+          {
+            "region": "BR",
+            "ticker": "PFFD"
+          },
+          {
+            "region": "BR",
+            "ticker": "CATH"
+          },
+          {
+            "region": "BR",
+            "ticker": "SNSR"
+          },
+          {
+            "region": "BR",
+            "ticker": "CTEC"
+          },
+          {
+            "region": "BR",
+            "ticker": "BKCH"
+          },
+          {
+            "region": "BR",
+            "ticker": "GNOM"
+          },
+          {
+            "region": "BR",
+            "ticker": "MILN-2"
+          },
+          {
+            "region": "BR",
+            "ticker": "SRET"
+          },
+          {
+            "region": "BR",
+            "ticker": "SIL"
+          },
+          {
+            "region": "BR",
+            "ticker": "SOCL"
+          },
+          {
+            "region": "BR",
+            "ticker": "BUG"
+          },
+          {
+            "region": "BR",
+            "ticker": "URA"
+          },
+          {
+            "region": "BR",
+            "ticker": "CHIQ"
+          },
+          {
+            "region": "BR",
+            "ticker": "DIV"
+          },
+          {
+            "region": "BR",
+            "ticker": "HERO"
+          },
+          {
+            "region": "BR",
+            "ticker": "MLPX"
+          },
+          {
+            "region": "BR",
+            "ticker": "MLPA"
+          },
+          {
+            "region": "BR",
+            "ticker": "DRIV"
+          },
+          {
+            "region": "BR",
+            "ticker": "COPX"
+          },
+          {
+            "region": "BR",
+            "ticker": "SDIV"
+          },
+          {
+            "region": "BR",
+            "ticker": "FINX"
+          },
+          {
+            "region": "BR",
+            "ticker": "CLOU"
+          },
+          {
+            "region": "BR",
+            "ticker": "BOTZ"
+          },
+          {
+            "region": "BR",
+            "ticker": "QYLD"
+          },
+          {
+            "region": "BR",
+            "ticker": "LIT"
+          },
+          {
+            "region": "BR",
+            "ticker": "PAVE"
+          },
+          {
+            "region": "CO",
+            "ticker": "GXTESCOL"
+          },
+          {
+            "region": "CO",
+            "ticker": "HCOLSEL"
+          },
+          {
+            "region": "HK",
+            "ticker": "3116"
+          },
+          {
+            "region": "HK",
+            "ticker": "3419"
+          },
+          {
+            "region": "HK",
+            "ticker": "3416"
+          },
+          {
+            "region": "HK",
+            "ticker": "3417"
+          },
+          {
+            "region": "HK",
+            "ticker": "3415"
+          },
+          {
+            "region": "HK",
+            "ticker": "3451"
+          },
+          {
+            "region": "HK",
+            "ticker": "3533"
+          },
+          {
+            "region": "HK",
+            "ticker": "3555"
+          },
+          {
+            "region": "HK",
+            "ticker": "3110"
+          },
+          {
+            "region": "CA",
+            "ticker": "AAPP"
+          },
+          {
+            "region": "CA",
+            "ticker": "AMZP"
+          },
+          {
+            "region": "CA",
+            "ticker": "GOOP"
+          },
+          {
+            "region": "CA",
+            "ticker": "NVDP"
+          },
+          {
+            "region": "CA",
+            "ticker": "SPCP"
+          },
+          {
+            "region": "CA",
+            "ticker": "TSLP"
+          }
+        ]
+      }
     },
     "activities": [
       {
-        "name": "Refresh each fund",
+        "name": "Acquire public holdings",
         "type": "ForEach",
         "dependsOn": [],
         "typeProperties": {
-          "items": {"value": "@createArray(json('{\"ticker\":\"AAPP\"}'),json('{\"ticker\":\"AMZP\"}'),json('{\"ticker\":\"GOOP\"}'),json('{\"ticker\":\"NVDP\"}'),json('{\"ticker\":\"SPCP\"}'),json('{\"ticker\":\"TSLP\"}'))", "type": "Expression"},
-          "isSequential": true,
+          "items": {
+            "value": "@pipeline().parameters.products",
+            "type": "Expression"
+          },
+          "isSequential": false,
+          "batchCount": 3,
           "activities": [
             {
-              "name": "Parse and calculate",
+              "name": "Acquire and normalize",
               "type": "WebActivity",
               "dependsOn": [],
-              "policy": {"timeout": "0.00:03:00", "retry": 2, "retryIntervalInSeconds": 30, "secureInput": true, "secureOutput": true},
+              "policy": {
+                "timeout": "0.00:03:00",
+                "retry": 2,
+                "retryIntervalInSeconds": 30,
+                "secureInput": true,
+                "secureOutput": true
+              },
               "typeProperties": {
                 "method": "POST",
-                "url": {"value": "@concat(pipeline().parameters.functionBaseUrl, '/api/refresh/', item().ticker)", "type": "Expression"},
+                "url": {
+                  "value": "@concat(pipeline().parameters.functionBaseUrl, '/api/refresh/', item().region, '/', item().ticker)",
+                  "type": "Expression"
+                },
                 "headers": {
                   "Content-Type": "application/json",
-                  "x-functions-key": {"value": "@pipeline().parameters.functionKey", "type": "Expression"}
+                  "x-functions-key": {
+                    "value": "@pipeline().parameters.functionKey",
+                    "type": "Expression"
+                  }
+                },
+                "body": "{}"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Calculate look-through",
+        "type": "ForEach",
+        "dependsOn": [
+          {
+            "activity": "Acquire public holdings",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ],
+        "typeProperties": {
+          "items": {
+            "value": "@pipeline().parameters.products",
+            "type": "Expression"
+          },
+          "isSequential": false,
+          "batchCount": 3,
+          "activities": [
+            {
+              "name": "Calculate look-through",
+              "type": "WebActivity",
+              "dependsOn": [],
+              "policy": {
+                "timeout": "0.00:03:00",
+                "retry": 2,
+                "retryIntervalInSeconds": 30,
+                "secureInput": true,
+                "secureOutput": true
+              },
+              "typeProperties": {
+                "method": "POST",
+                "url": {
+                  "value": "@concat(pipeline().parameters.functionBaseUrl, '/api/calculate/', item().region, '/', item().ticker)",
+                  "type": "Expression"
+                },
+                "headers": {
+                  "Content-Type": "application/json",
+                  "x-functions-key": {
+                    "value": "@pipeline().parameters.functionKey",
+                    "type": "Expression"
+                  }
                 },
                 "body": "{}"
               }

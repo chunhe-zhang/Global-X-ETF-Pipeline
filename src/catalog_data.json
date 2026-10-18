@@ -1281,1002 +1281,1093 @@
       "region_code": "AU",
       "ticker": "A300",
       "name": "Australia 300 ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/a300/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ACDC",
       "name": "Battery Tech & Lithium ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/acdc/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "AINF",
       "name": "Artificial Intelligence Infrastructure ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ainf/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ATOM",
       "name": "Uranium ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/atom/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "AYLD",
       "name": "S&P/ASX 200 Covered Call Complex ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ayld/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "BANK",
       "name": "Australian Bank Credit ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/bank/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "BCOM",
       "name": "Bloomberg Commodity Complex ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/bcom/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "BUGG",
       "name": "Cybersecurity ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/bugg/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "CURE",
       "name": "S&P Biotech ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/cure/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "DRGN",
       "name": "China Tech ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/drgn/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "DTEC",
       "name": "Defence Tech ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/dtec/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "EBTC",
       "name": "Bitcoin ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ebtc/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "EETH",
       "name": "Ethereum ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/eeth/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ESTX",
       "name": "EURO STOXX 50 ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/estx/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ETPMAG",
       "name": "Physical Silver Structured",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/etpmag/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ETPMPD",
       "name": "Physical Palladium Structured",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/etpmpd/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ETPMPM",
       "name": "Physical Precious Metals Basket Structured",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/etpmpm/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ETPMPT",
       "name": "Physical Platinum Structured",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/etpmpt/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "FANG",
       "name": "FANG+ ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/fang/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "FHNG",
       "name": "FANG+ (Currency Hedged) ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/fhng/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "FTEC",
       "name": "Fintech & Blockchain ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ftec/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GARP",
       "name": "S&P World ex Australia GARP ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/garp/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GHLD",
       "name": "Gold Bullion (Currency Hedged) ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ghld/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GHRP",
       "name": "S&P World ex Australia GARP (Currency Hedged) ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ghrp/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GMTL",
       "name": "Rare Earth and Critical Metals ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/gmtl/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GOLD",
       "name": "Physical Gold Structured",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/gold/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GRPA",
       "name": "S&P Australia GARP ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/grpa/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GXAI",
       "name": "Artificial Intelligence ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/gxai/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "GXLD",
       "name": "Gold Bullion ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/gxld/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "HGEN",
       "name": "Hydrogen ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/hgen/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "HMND",
       "name": "Humanoid Robotics ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/hmnd/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ISMD",
       "name": "MSCI International Small and Mid Cap ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ismd/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "J100",
       "name": "Japan TOPIX 100 ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/j100/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "LNAS",
       "name": "Ultra Long Nasdaq 100 Complex ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/lnas/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "MOON",
       "name": "Space Tech ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/moon/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "NDIA",
       "name": "India Nifty 50 ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ndia/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "OZXX",
       "name": "Australia ex Financials & Resources ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ozxx/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "PAVE",
       "name": "US Infrastructure Development ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/pave/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "QYLD",
       "name": "Nasdaq 100 Covered Call Complex ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/qyld/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ROBO",
       "name": "ROBO Global Robotics & Automation ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/robo/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "RSSL",
       "name": "Russell 2000 ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/rssl/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "SEMI",
       "name": "Semiconductor ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/semi/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "SLVM",
       "name": "Silver Miners ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/slvm/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "SNAS",
       "name": "Ultra Short Nasdaq 100 Complex ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/snas/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "TECH",
       "name": "Morningstar Global Technology ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/tech/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "U100",
       "name": "US 100 ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/u100/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "USHY",
       "name": "USD High Yield Bond (Currency Hedged) ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ushy/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "USIG",
       "name": "USD Corporate Bond (Currency Hedged) ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/usig/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "USTB",
       "name": "US Treasury Bond (Currency Hedged) ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/ustb/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "UYLD",
       "name": "S&P 500 Covered Call Complex ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/uyld/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "WIRE",
       "name": "Copper Miners ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/wire/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ZYAU",
       "name": "S&P/ASX 200 High Dividend ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/zyau/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "AU",
       "ticker": "ZYUS",
       "name": "S&P 500 High Yield Low Volatility ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.au/funds/zyus/",
       "region": "Australia",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.au/funds/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "CHPX",
       "name": "AI Semiconductor & Quantum ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/chpx/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "ORBX",
       "name": "Space Tech ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/orbx/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "EART",
       "name": "Rare Earth & Critical Materials ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/eart/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "COLO",
       "name": "MSCI Colombia ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/colo/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "SHLD",
       "name": "Defense Tech ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/shld/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "GOEX",
       "name": "Gold Explorers ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/goex/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "DTCR",
       "name": "Data Center & Digital Infrastructure ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/dtcr/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "RSSL",
       "name": "Russell 2000 ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/rssl/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "ARGT",
       "name": "MSCI Argentina ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/argt/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "CLIP",
       "name": "1-3 Month T-Bill ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/clip/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "AIQ",
       "name": "Artificial Intelligence & Technology ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/aiq/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "PFFV",
       "name": "Variable Rate Preferred ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/pffv/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "PFFD",
       "name": "U.S. Preferred ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/pffd/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "CATH",
       "name": "S&P 500 Catholic Values ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/cath/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "SNSR",
       "name": "Internet of Things ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/snsr/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "CTEC",
       "name": "CleanTech ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/ctec/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "BKCH",
       "name": "Blockchain ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/bkch/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "GNOM",
       "name": "Genomics & Biotechnology ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/gnom/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "MILN-2",
       "name": "Millennial Consumer ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/miln/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "SRET",
       "name": "SuperDividend® REIT ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/sret/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "SIL",
       "name": "Silver Miners ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/sil/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "SOCL",
       "name": "Social Media ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/socl/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "BUG",
       "name": "Cybersecurity ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/bug/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "URA",
       "name": "Uranium ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/ura/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "CHIQ",
       "name": "MSCI China Consumer Discretionary ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/chiq/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "DIV",
       "name": "SuperDividend® U.S. ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/div/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "HERO",
       "name": "Video Games & Esports ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/hero/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "MLPX",
       "name": "MLP & Energy Infrastructure ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/mlpx/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "MLPA",
       "name": "MLP ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/mlpa/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "DRIV",
       "name": "Autonomous & Electric Vehicles ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/driv/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "COPX",
       "name": "Copper Miners ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/copx/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "SDIV",
       "name": "SuperDividend® ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/sdiv/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "FINX",
       "name": "FinTech ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/finx/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "CLOU",
       "name": "Cloud Computing ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/clou/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "BOTZ",
       "name": "Robotics & Artificial Intelligence ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/botz/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "QYLD",
       "name": "Nasdaq 100 Covered Call ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/qyld/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "LIT",
       "name": "Lithium & Battery Tech ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/lit/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "BR",
       "ticker": "PAVE",
       "name": "U.S. Infrastructure Development ETF",
-      "product_url": null,
+      "product_url": "https://globalxetfs.com.br/en/funds/pave/",
       "region": "Brazil",
       "catalog_status": "product_facts",
       "holdings_status": "not_loaded",
       "catalog_url": "https://globalxetfs.com.br/en/explore/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_route_pattern"
     },
     {
       "region_code": "CO",
@@ -2304,100 +2395,109 @@
       "region_code": "HK",
       "ticker": "3116",
       "name": "Global X Asia Pacific High Dividend Yield ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/asia-pacific-high-dividend-yield-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3419",
       "name": "Global X HSI Covered Call Active ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/covered-call-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3416",
       "name": "Global X HSCEI Covered Call Active ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/hscei-covered-call-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3417",
       "name": "Global X Hang Seng TECH Covered Call Active ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/hang-seng-tech-covered-call-active-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3415",
       "name": "Global X S&P 500 Covered Call Active ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/sp-500-covered-call-active-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3451",
       "name": "Global X Nasdaq 100 Covered Call Active ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/nasdaq-100-covered-call-active-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3533",
       "name": "Global X Gold Covered Call Active ETF* (*This is a synthetic ETF)",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/gold-covered-call-active-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3555",
       "name": "Global X Hang Seng High Dividend Yield Enhanced Income ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/hang-seng-high-dividend-yield-enhanced-income-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "HK",
       "ticker": "3110",
       "name": "Global X Hang Seng High Dividend Yield ETF",
-      "product_url": null,
+      "product_url": "https://www.globalxetfs.com.hk/funds/hang-seng-high-dividend-yield-etf/",
       "region": "Hong Kong",
       "catalog_status": "partial_listing",
       "holdings_status": "not_loaded",
       "catalog_url": "https://www.globalxetfs.com.hk/fundlist/",
-      "catalog_as_of": "2026-10-18"
+      "catalog_as_of": "2026-10-18",
+      "product_url_status": "official_listing_link"
     },
     {
       "region_code": "CA",
