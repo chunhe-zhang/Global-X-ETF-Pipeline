@@ -1,0 +1,9 @@
+{
+  "name": "ls_adls_globalx_bronze",
+  "properties": {
+    "type": "AzureBlobFS",
+    "typeProperties": {
+      "url": "https://stglobalxetfdev01.dfs.core.windows.net"
+    }
+  }
+}
