@@ -1,17 +1,99 @@
 {
   "name": "pl_globalx_ingest",
   "properties": {
-    "description": "Call the HTTP-triggered Azure Function to capture official Global X product pages into the bronze data lake.",
-    "activities": [{
-      "name": "Fetch_GlobalX_Product_Pages",
-      "type": "AzureFunctionActivity",
-      "dependsOn": [],
-      "policy": {"timeout": "0.00:10:00", "retry": 2, "retryIntervalInSeconds": 30, "secureOutput": false, "secureInput": false},
-      "userProperties": [],
-      "typeProperties": {"functionName": "api/ingest", "method": "POST", "body": "{}"},
-      "linkedServiceName": {"referenceName": "ls_globalx_function", "type": "LinkedServiceReference"}
-    }],
+    "description": "Sequentially copy six official Global X PowerStock product pages as immutable raw HTML files into ADLS Gen2 bronze.",
+    "activities": [
+      {
+        "name": "ForEach_PowerStock_ETF",
+        "type": "ForEach",
+        "dependsOn": [],
+        "userProperties": [],
+        "typeProperties": {
+          "items": [
+            {
+              "ticker": "AAPP",
+              "relativeUrl": "/product/aapp"
+            },
+            {
+              "ticker": "AMZP",
+              "relativeUrl": "/product/amzp"
+            },
+            {
+              "ticker": "GOOP",
+              "relativeUrl": "/product/goop"
+            },
+            {
+              "ticker": "NVDP",
+              "relativeUrl": "/product/nvdp"
+            },
+            {
+              "ticker": "SPCP",
+              "relativeUrl": "/product/spcp"
+            },
+            {
+              "ticker": "TSLP",
+              "relativeUrl": "/product/tslp"
+            }
+          ],
+          "isSequential": true,
+          "activities": [
+            {
+              "name": "Copy_Product_Page_To_Bronze",
+              "type": "Copy",
+              "dependsOn": [],
+              "policy": {
+                "timeout": "0.00:10:00",
+                "retry": 2,
+                "retryIntervalInSeconds": 30,
+                "secureOutput": false,
+                "secureInput": false
+              },
+              "userProperties": [],
+              "typeProperties": {
+                "source": {
+                  "type": "BinarySource",
+                  "storeSettings": {
+                    "type": "HttpReadSettings",
+                    "requestMethod": "GET"
+                  }
+                },
+                "sink": {
+                  "type": "BinarySink",
+                  "storeSettings": {
+                    "type": "AzureBlobFSWriteSettings"
+                  }
+                },
+                "enableStaging": false
+              },
+              "inputs": [
+                {
+                  "referenceName": "ds_http_globalx_binary",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "relativeUrl": "@item().relativeUrl"
+                  }
+                }
+              ],
+              "outputs": [
+                {
+                  "referenceName": "ds_adls_globalx_binary",
+                  "type": "DatasetReference",
+                  "parameters": {
+                    "directory": "@concat('holdings/', toLower(item().ticker), '/ingest_date=', formatDateTime(utcNow(), 'yyyy-MM-dd'))",
+                    "fileName": "@concat(toLower(item().ticker), '_', formatDateTime(utcNow(), 'yyyyMMddTHHmmssZ'), '.html')"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
     "parameters": {},
-    "annotations": ["globalx", "bronze", "interview-project"]
+    "annotations": [
+      "globalx",
+      "bronze",
+      "http-copy"
+    ]
   }
 }
