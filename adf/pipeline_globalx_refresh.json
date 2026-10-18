@@ -1,0 +1,37 @@
+{
+  "name": "pl_globalx_lookthrough_refresh_template",
+  "properties": {
+    "parameters": {
+      "functionBaseUrl": {"type": "String"},
+      "functionKey": {"type": "SecureString"}
+    },
+    "activities": [
+      {
+        "name": "Refresh each fund",
+        "type": "ForEach",
+        "dependsOn": [],
+        "typeProperties": {
+          "items": {"value": "@createArray(json('{\"ticker\":\"AAPP\"}'),json('{\"ticker\":\"AMZP\"}'),json('{\"ticker\":\"GOOP\"}'),json('{\"ticker\":\"NVDP\"}'),json('{\"ticker\":\"SPCP\"}'),json('{\"ticker\":\"TSLP\"}'))", "type": "Expression"},
+          "isSequential": true,
+          "activities": [
+            {
+              "name": "Parse and calculate",
+              "type": "WebActivity",
+              "dependsOn": [],
+              "policy": {"timeout": "0.00:03:00", "retry": 2, "retryIntervalInSeconds": 30, "secureInput": true, "secureOutput": true},
+              "typeProperties": {
+                "method": "POST",
+                "url": {"value": "@concat(pipeline().parameters.functionBaseUrl, '/api/refresh/', item().ticker)", "type": "Expression"},
+                "headers": {
+                  "Content-Type": "application/json",
+                  "x-functions-key": {"value": "@pipeline().parameters.functionKey", "type": "Expression"}
+                },
+                "body": "{}"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
