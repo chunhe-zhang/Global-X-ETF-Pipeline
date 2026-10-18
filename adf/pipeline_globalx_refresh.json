@@ -960,7 +960,7 @@
           {
             "activity": "Acquire public holdings",
             "dependencyConditions": [
-              "Succeeded"
+              "Completed"
             ]
           }
         ],
