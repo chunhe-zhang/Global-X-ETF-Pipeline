@@ -28,20 +28,20 @@ Raw snapshots are written under `data/bronze/<ticker>/` with a UTC timestamp in 
 Global X product pages
         | HTTPS
         v
-Azure Data Factory ---> Azure Function (Python HTTP trigger)
-                              | managed identity
-                              v
-                     ADLS Gen2 / Blob Storage
-                     bronze HTML + JSONL manifest
+Azure Data Factory Copy activity
+        | HTTP GET (six product pages, sequential ForEach)
+        v
+ADLS Gen2 / Blob Storage
+bronze HTML snapshots partitioned by ticker and ingest date
 ```
 
-The Azure Function implementation is in `function_app.py`. It fetches all six official pages, records a SHA-256 checksum and request metadata, and writes immutable snapshots under `bronze/holdings/<ticker>/ingest_date=YYYY-MM-DD/`. ADF orchestration is in `adf/`; call the function manually first, then add a daily schedule. In Azure, grant the Function managed identity **Storage Blob Data Contributor** on the storage account or bronze container. Locally, sign in with Azure CLI and set `BLOB_ACCOUNT_URL`.
+The ADF artifacts are in `adf/`. A sequential `ForEach` executes an HTTP Binary Copy for each official product page and writes the raw HTML under `bronze/holdings/<ticker>/ingest_date=YYYY-MM-DD/` using a UTC timestamped filename. This keeps the source payload unchanged for replay. In Azure, grant the Data Factory system-assigned managed identity **Storage Blob Data Contributor** on the storage account. The local Python script remains a simple way to reproduce the same raw capture locally.
 
-This architecture demonstrates ingestion, orchestration, partitioned data-lake storage, managed identity, retries, and lineage without a Databricks workspace. The earlier Databricks deployment was rejected because the subscription does not support the Trial SKU.
+This architecture demonstrates ingestion, orchestration, partitioned data-lake storage, managed identity, retries, and lineage without Databricks or a custom compute host. Azure rejected Databricks Trial SKU for this subscription and also does not support Functions Flex Consumption on this Free Trial subscription, so the pipeline uses ADF's native HTTP Copy activity.
 
 ## GitHub and Azure deployment
 
-Keep source in a private GitHub repository. Connect ADF authoring to that repository and the `adf` folder; deploy the Function from GitHub Actions using Azure OIDC or a protected publish profile. Do not commit secrets, function keys, local settings, or downloaded source snapshots. Keep subscription-specific values in deployment parameters, not source code.
+Keep source in a private GitHub repository. Connect ADF authoring to that repository and the `adf` folder. Do not commit secrets or downloaded source snapshots. Keep subscription-specific values in deployment parameters, not source code.
 
 ## Data use
 
