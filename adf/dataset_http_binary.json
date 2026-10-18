@@ -1,0 +1,21 @@
+{
+  "name": "ds_http_globalx_binary",
+  "properties": {
+    "linkedServiceName": {
+      "referenceName": "ls_http_globalx",
+      "type": "LinkedServiceReference"
+    },
+    "parameters": {
+      "relativeUrl": {
+        "type": "String"
+      }
+    },
+    "type": "Binary",
+    "typeProperties": {
+      "location": {
+        "type": "HttpServerLocation",
+        "relativeUrl": "@dataset().relativeUrl"
+      }
+    }
+  }
+}
