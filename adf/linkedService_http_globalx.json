@@ -1,0 +1,11 @@
+{
+  "name": "ls_http_globalx",
+  "properties": {
+    "type": "HttpServer",
+    "typeProperties": {
+      "url": "https://www.globalx.ca",
+      "enableServerCertificateValidation": true,
+      "authenticationType": "Anonymous"
+    }
+  }
+}
