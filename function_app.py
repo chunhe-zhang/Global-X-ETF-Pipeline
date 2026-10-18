@@ -1,11 +1,12 @@
 import json, logging, os, re
+import requests
 from datetime import datetime, timezone
 import azure.functions as func
 from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient
 from src.catalog import PRODUCTS, CATALOG_AS_OF
 from src.lookthrough import calculate_lookthrough
-from src.parse_holdings import parse_holdings_html
+from src.public_holdings import fetch_public_holdings
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 CONTAINER = os.getenv("DATA_CONTAINER", "bronze")
@@ -58,45 +59,72 @@ def lookthrough(req: func.HttpRequest) -> func.HttpResponse:
             "message":"Catalog entry exists, but no processed holdings snapshot is available yet."}, 404)
 
 @app.route(route="refresh/{ticker}", methods=["POST"], auth_level=func.AuthLevel.FUNCTION)
+@app.route(route="refresh/{region}/{ticker}", methods=["POST"], auth_level=func.AuthLevel.FUNCTION)
 def refresh(req: func.HttpRequest) -> func.HttpResponse:
-    """Parse the latest ADF-landed Canadian HTML snapshot, persist silver, then recompute gold."""
+    """Fetch official public holdings, persist raw and silver snapshots."""
+    region = (req.route_params.get("region") or "CA").upper()
     ticker = (req.route_params.get("ticker") or "").upper()
-    if ticker not in CANADIAN_FUNDS:
-        return _json_response({"error":"unknown_fund","ticker":ticker}, 404)
+    product = next((p for p in PRODUCTS if p["region_code"] == region and p["ticker"].upper() == ticker), None)
+    if not product:
+        return _json_response({"error":"unknown_fund","region":region,"ticker":ticker}, 404)
+    try:
+        acquired = fetch_public_holdings(product, KNOWN_FUNDS)
+        container = _container()
+        ingested_at = datetime.now(timezone.utc).isoformat()
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        ext = "csv" if "csv" in acquired["media_type"] else "html"
+        raw_name = f"raw/holdings/{region}/{ticker}/{stamp}.{ext}"
+        container.get_blob_client(raw_name).upload_blob(acquired["raw"], overwrite=True)
+        normalized = {
+            "ticker":ticker,"region":region,"as_of":acquired["as_of"],
+            "ingested_at":ingested_at,"source_url":acquired["source_url"],
+            "source_blob":raw_name,"holdings":acquired["holdings"],
+            "coverage_status":"parsed_public_source"
+        }
+        silver_name=f"silver/holdings/{region}/{ticker}.json"
+        container.get_blob_client(silver_name).upload_blob(json.dumps(normalized),overwrite=True)
+        return _json_response({"ticker":ticker,"region":region,"silver":silver_name,
+                               "source_blob":raw_name,"holdings_count":len(acquired["holdings"]),
+                               "as_of":acquired["as_of"]},202)
+    except requests.exceptions.HTTPError as exc:
+        logging.warning("Public source returned HTTP error for %s/%s: %s", region, ticker, exc)
+        return _json_response({"error":"public_source_http_error","region":region,"ticker":ticker,
+                               "message":"Official public source could not be fetched."},502)
+    except Exception:
+        logging.exception("Public holdings acquisition failed for %s/%s",region,ticker)
+        return _json_response({"error":"public_source_unavailable","region":region,"ticker":ticker,
+                               "message":"No parseable public holdings were found; no exposure was fabricated."},422)
+
+@app.route(route="calculate/{region}/{ticker}", methods=["POST"], auth_level=func.AuthLevel.FUNCTION)
+def calculate(req: func.HttpRequest) -> func.HttpResponse:
+    """Recalculate after acquisition finishes so nested ETF children are available."""
+    region = (req.route_params.get("region") or "").upper()
+    ticker = (req.route_params.get("ticker") or "").upper()
+    if not any(p["region_code"] == region and p["ticker"].upper() == ticker for p in PRODUCTS):
+        return _json_response({"error":"unknown_fund","region":region,"ticker":ticker},404)
     try:
         container = _container()
-        prefix = f"holdings/{ticker}/"
-        candidates = [b for b in container.list_blobs(name_starts_with=prefix) if b.name.lower().endswith(".html")]
-        if not candidates:
-            return _json_response({"error":"raw_snapshot_missing","ticker":ticker}, 404)
-        latest = max(candidates, key=lambda b: b.last_modified or datetime.min.replace(tzinfo=timezone.utc))
-        html = container.get_blob_client(latest.name).download_blob().readall().decode("utf-8", errors="replace")
-        rows = parse_holdings_html(html, KNOWN_FUNDS)
-        date_match = re.search(r"(?:as of|holdings as at|data as at)\s*[:\-]?\s*([A-Z][a-z]+\s+\d{1,2},\s+\d{4})", html, re.I)
-        source_as_of = date_match.group(1) if date_match else None
-        product = next(p for p in PRODUCTS if p["region_code"]=="CA" and p["ticker"].upper()==ticker)
-        ingested_at = datetime.now(timezone.utc).isoformat()
-        normalized = {"ticker":ticker,"region":"CA","as_of":source_as_of,"ingested_at":ingested_at,
-                      "source_url":product["product_url"],"source_blob":latest.name,"holdings":rows}
-        silver_name=f"silver/holdings/CA/{ticker}.json"
-        container.get_blob_client(silver_name).upload_blob(json.dumps(normalized), overwrite=True)
         graph = {}
-        for blob in container.list_blobs(name_starts_with="silver/holdings/CA/"):
+        for blob in container.list_blobs(name_starts_with=f"silver/holdings/{region}/"):
             if blob.name.endswith(".json"):
                 key = blob.name.rsplit("/",1)[-1].removesuffix(".json").upper()
                 try:
                     graph[key] = json.loads(container.get_blob_client(blob.name).download_blob().readall()).get("holdings",[])
                 except Exception:
-                    logging.warning("Skipping unreadable normalized snapshot %s", blob.name)
-        graph[ticker] = rows
+                    logging.warning("Skipping unreadable normalized snapshot %s",blob.name)
+        if ticker not in graph:
+            return _json_response({"error":"silver_snapshot_missing","region":region,"ticker":ticker},404)
         result = calculate_lookthrough(ticker, graph)
-        result.update({"region":"CA","as_of":source_as_of,"source_url":product["product_url"],
-                       "source_blob":latest.name,"processed_at":ingested_at,"method":"recursive_weight_multiplication"})
-        target=container.get_blob_client(f"gold/lookthrough/CA/{ticker}.json")
+        product = next(p for p in PRODUCTS if p["region_code"]==region and p["ticker"].upper()==ticker)
+        silver = json.loads(container.get_blob_client(f"silver/holdings/{region}/{ticker}.json").download_blob().readall())
+        result.update({"region":region,"as_of":silver.get("as_of"),"source_url":silver.get("source_url"),
+                       "processed_at":datetime.now(timezone.utc).isoformat(),
+                       "method":"recursive_weight_multiplication"})
+        target=container.get_blob_client(f"gold/lookthrough/{region}/{ticker}.json")
         target.upload_blob(json.dumps(result),overwrite=True)
-        return _json_response({"ticker":ticker,"silver":silver_name,"gold":target.blob_name,
-                                "holdings_count":len(rows),"lookthrough_count":len(result["holdings"])},202)
+        return _json_response({"ticker":ticker,"region":region,"gold":target.blob_name,
+                               "lookthrough_count":len(result.get("holdings",[])),
+                               "unresolved_count":len(result.get("unresolved",[]))},202)
     except Exception:
-        logging.exception("Refresh failed for %s",ticker)
-        return _json_response({"error":"refresh_failed","ticker":ticker,
-                               "message":"Source parsing or storage write failed; inspect Function logs."},400)
+        logging.exception("Look-through calculation failed for %s/%s",region,ticker)
+        return _json_response({"error":"calculation_failed","region":region,"ticker":ticker},500)
