@@ -2,7 +2,7 @@
 
 This template is designed to run from Azure Data Factory after the Function App
 has been deployed. It processes the catalog entries that have a mapped official
-product URL in `src/catalog_data.json` (currently 124 of 224 entries).
+product URL in `src/catalog_data.json` (all 224 catalog entries with mapped official regional product pages).
 
 ## Flow
 
@@ -35,13 +35,13 @@ product URL in `src/catalog_data.json` (currently 124 of 224 entries).
 
 ## Coverage limits
 
-The current catalog has 224 product entries, but only 124 have an explicit
-product page URL in the catalog: US 116, Canada 6, Colombia 2. Australia (53),
-Brazil (38), and Hong Kong (9) lack product-level URLs in this snapshot, so
-they are not silently assigned guessed endpoints. Public-site responses can
-still fail or change format; failed acquisitions return a per-fund error and
-write no fabricated holdings. The UI should treat these as unavailable until
-an official source URL and parser are verified.
+The catalog now maps all 224 entries to official product pages: US 116, AU 53,
+BR 38, CO 2, HK 9, and CA 6. AU and Brazil URLs follow the official funds-page
+route pattern and are marked as such in catalog metadata; Hong Kong URLs were
+copied from its official product listing. A route can still return 404 or omit
+full holdings. The collector records a per-fund error and never writes
+fabricated holdings. A successful Function run is required to establish which
+sources actually parse.
 
 ETF holdings disclose snapshots as of a source date. Leveraged products can
 have cash, swaps, options, or futures; portfolio weights may exceed 100%.
