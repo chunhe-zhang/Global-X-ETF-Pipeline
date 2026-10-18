@@ -11,8 +11,7 @@ from src.public_holdings import fetch_public_holdings
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 CONTAINER = os.getenv("DATA_CONTAINER", "bronze")
 ACCOUNT_URL = os.environ["BLOB_ACCOUNT_URL"]
-KNOWN_FUNDS = {p["ticker"].upper() for p in PRODUCTS}
-CANADIAN_FUNDS = {p["ticker"].upper() for p in PRODUCTS if p["region_code"] == "CA"}
+KNOWN_FUNDS_BY_REGION = {region: {p["ticker"].upper() for p in PRODUCTS if p["region_code"] == region} for region in {p["region_code"] for p in PRODUCTS}}
 
 def _container():
     svc = BlobServiceClient(ACCOUNT_URL, credential=DefaultAzureCredential())
@@ -68,7 +67,7 @@ def refresh(req: func.HttpRequest) -> func.HttpResponse:
     if not product:
         return _json_response({"error":"unknown_fund","region":region,"ticker":ticker}, 404)
     try:
-        acquired = fetch_public_holdings(product, KNOWN_FUNDS)
+        acquired = fetch_public_holdings(product, KNOWN_FUNDS_BY_REGION.get(region, set()))
         container = _container()
         ingested_at = datetime.now(timezone.utc).isoformat()
         stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
