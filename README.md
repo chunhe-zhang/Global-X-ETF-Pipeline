@@ -35,14 +35,15 @@ ADLS Gen2 / Blob Storage
 bronze HTML snapshots partitioned by ticker and ingest date
 ```
 
-The ADF artifacts are in `adf/`. A sequential `ForEach` executes an HTTP Binary Copy for each official product page and writes the raw HTML under `bronze/holdings/<ticker>/ingest_date=YYYY-MM-DD/` using a UTC timestamped filename. This keeps the source payload unchanged for replay. In Azure, grant the Data Factory system-assigned managed identity **Storage Blob Data Contributor** on the storage account. The local Python script remains a simple way to reproduce the same raw capture locally.
+The ADF artifacts are in `adf/`. The deployed `pl_globalx_ingest` pipeline runs a sequential `ForEach` and executes an HTTP Binary Copy for each official product page. It writes raw HTML under `bronze/holdings/<ticker>/ingest_date=YYYY-MM-DD/` using a UTC timestamped filename. This keeps the source payload unchanged for replay. The Data Factory uses a system-assigned managed identity; grant **Storage Blob Data Contributor** at the `bronze` container scope before running the pipeline. The local Python script remains a simple way to reproduce the same raw capture locally.
 
 This architecture demonstrates ingestion, orchestration, partitioned data-lake storage, managed identity, retries, and lineage without Databricks or a custom compute host. Azure rejected Databricks Trial SKU for this subscription and also does not support Functions Flex Consumption on this Free Trial subscription, so the pipeline uses ADF's native HTTP Copy activity.
 
 ## GitHub and Azure deployment
 
-Keep source in a private GitHub repository. Connect ADF authoring to that repository and the `adf` folder. Do not commit secrets or downloaded source snapshots. Keep subscription-specific values in deployment parameters, not source code.
+The source is in a private GitHub repository. The Azure Data Factory GitHub connection is not configured because its consent screen requested access to all repositories available to the account. ADF resources were published directly to the factory, and their JSON definitions are kept in `adf/`. Do not commit secrets or downloaded source snapshots. Keep subscription-specific values in deployment parameters, not source code.
 
 ## Data use
 
 This project is for educational and interview demonstration purposes. Source pages state that holdings are subject to change. Every output should retain its source URL and source as-of date and should not be presented as investment advice.
+
