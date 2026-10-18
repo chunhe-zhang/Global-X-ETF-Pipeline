@@ -43,7 +43,12 @@ def _name_column(headers, ticker_idx):
     return None
 
 def _pct(value: str):
-    text = (value or "").strip().replace(",", "").replace("%", "")
+    text = (value or "").strip().replace("%", "")
+    if "," in text and "." not in text:
+        # Regional pages such as Brazil use decimal commas for percentage fields.
+        text = text.replace(",", ".") if re.search(r",\d{1,2}$", text) else text.replace(",", "")
+    else:
+        text = text.replace(",", "")
     match = re.search(r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)", text)
     return float(match.group()) if match else None
 
@@ -118,7 +123,8 @@ def fetch_public_holdings(product: dict, known_funds: set[str]):
     raw = response.content
     content_type = response.headers.get("Content-Type", "").lower()
     text = response.text
-    holdings = _parse_csv(text, known_funds) if ("csv" in content_type or "text/plain" in content_type) else []
+    # Parse CSV by content, not Content-Type: some download endpoints return octet-stream.
+    holdings = _parse_csv(text, known_funds)
     final_url = response.url
     if not holdings:
         soup = BeautifulSoup(text, "html.parser")
