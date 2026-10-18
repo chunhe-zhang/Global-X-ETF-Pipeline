@@ -1,21 +1,28 @@
-# Look-through pipeline deployment notes
+# Look-through deployment notes
 
-This is a template, not yet deployed. Existing ADF Copy pipeline remains the raw landing step.
+Existing ADF Copy pipeline remains the raw landing step. The multi-region catalog snapshot is metadata; holding availability is tracked independently.
 
 ## Logical lake layout (inside existing private bronze container)
-- `holdings/<ticker>/ingest_date=YYYY-MM-DD/*.html`: unchanged official source snapshot (existing ADF output)
-- `silver/holdings/CA/<ticker>.json`: source-adapter normalized rows, each with ticker, name, weight_pct, is_fund, as_of, source_url
-- `gold/lookthrough/CA/<ticker>.json`: recursively multiplied exposure used by the website
+- `holdings/<ticker>/ingest_date=YYYY-MM-DD/*.html`: raw Canadian source snapshots (existing ADF pipeline)
+- `silver/holdings/CA/<ticker>.json`: parsed source rows with ticker, name, weight_pct, is_fund, as_of, and source_url
+- `gold/lookthrough/CA/<ticker>.json`: recursively multiplied exposure served by the API
 
-The API expects ADF or a parser job to write normalized JSON to silver before refresh. This PR supplies the recursive calculator and API skeleton; a source-specific parser is the next engineering milestone. Never infer missing positions from product names.
+The HTML parser is best-effort and must be checked against source table layouts. It rejects pages where it cannot find a recognizable holdings/weight table; it does not fabricate results.
 
 ## Azure Function
-Deploy this Python Function App on a supported Linux Functions plan in the same region as Storage. Set `BLOB_ACCOUNT_URL`, `DATA_CONTAINER=bronze`, and `ALLOWED_ORIGIN=https://chunhe-zhang.github.io`. Enable a system-assigned identity and grant it **Storage Blob Data Contributor** scoped to the existing `bronze` container. This is a new identity and assignment; it has not been granted yet.
+Deploy the Python Function App on a supported plan and set `BLOB_ACCOUNT_URL`, `DATA_CONTAINER=bronze`, and `ALLOWED_ORIGIN=https://chunhe-zhang.github.io`. Enable a system-assigned identity and grant **Storage Blob Data Contributor** only on the existing `bronze` container. This Function identity has not yet been created or granted access.
 
-The API routes are `GET /api/catalog`, `GET /api/lookthrough/{ticker}`, and `POST /api/refresh`. Protect POST with Entra authentication or a Function key stored as an ADF secure parameter/Key Vault reference. Public GET routes return only public derived holdings. Do not use anonymous POST in production.
+API routes:
+- `GET /api/catalog`: returns the 224-entry public regional catalog and per-product gold-snapshot availability
+- `GET /api/lookthrough/{region}/{ticker}`: returns one processed snapshot
+- `POST /api/refresh/{ticker}`: key-protected Canadian raw-to-silver-to-gold processing
+
+Public GET returns only public product/holdings data. Keep POST protected with a Function key or Entra authentication. Set CORS to the GitHub Pages origin. Avoid including account keys in GitHub.
 
 ## ADF orchestration
-Keep the deployed raw ingestion pipeline. After source parsing writes silver, call the refresh route per ticker using a Web activity. The JSON in `pipeline_globalx_refresh.json` is a starter template and needs a Function linked service / secure parameter wiring before publish. Existing Data Factory identity currently only has access to bronze.
+Keep the deployed raw ingestion pipeline. Publish `pipeline_globalx_refresh.json` after deploying the Function and store its Function key as a secure pipeline parameter or Key Vault reference. The template runs sequentially over the six currently ingested Canadian products. Existing ADF managed identity has access only to bronze.
 
-## Cost and coverage
-No new Azure service has been provisioned. Function hosting, logging, and outbound calls may incur cost. The first catalog slice is the six Canadian PowerStock products already ingested by ADF; expand from official region catalogs only when accessible. Each output must retain source date, URL, and unresolved ETF edges. Holdings over 100% are allowed and must not be normalized to 100%.
+## Coverage and cost
+Catalog capture date is 2026-10-18. The catalog includes US (116 ticker-only), Australia (53), Brazil (38), Colombia (2), Hong Kong (9 partial visible listings), and Canada (6 ADF products). It is not a claim that holdings are available for all products. Japan is omitted per the official site's reproduction restriction; Canada full catalog retrieval was blocked; Europe and Singapore had no product-level rows in the captured public pages.
+
+No Function App has been provisioned yet. Function hosting and logging may incur charges; check the subscription's pricing and plan availability before deployment. Weights over 100% are valid and should not be normalized to 100%.
