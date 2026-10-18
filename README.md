@@ -1,17 +1,51 @@
-# Global X ETF Holdings Pipeline
+# Global X ETF Look-through
 
-An interview project for an Azure Data Engineer role. The first milestone collects the published holdings pages for Global X Canada's six PowerStock ETFs and stores timestamped raw HTML snapshots for lineage and replay.
+An Azure Data Engineer interview project that catalogs publicly listed Global X products and calculates look-through exposure when source holdings are available.
 
-## Initial scope
+## Public product catalog
 
-- AAPP, AMZP, GOOP, NVDP, SPCP, TSLP
-- Source: each fund's official Global X Canada product page
-- First layer: raw HTML snapshots (bronze); parsing and validation come next
-- Holdings are point-in-time data. Keep the source as-of date separate from the fetch timestamp.
+The website catalog snapshot was captured on **2026-10-18** from public regional catalog files saved in the user-authorized project folder. It includes **224 listings**:
 
-## Source fields observed
+| Region | Listings | Current catalog detail |
+|---|---:|---|
+| United States | 116 | Ticker and official product URL |
+| Australia | 53 | Product names and public fund facts |
+| Brazil | 38 | Product names and public fund facts |
+| Colombia | 2 | Product facts; top holdings were captured separately |
+| Hong Kong | 9 | Partial visible product list |
+| Canada | 6 | PowerStock funds already landed by ADF |
 
-Each product page exposes a `Top Holdings` section with a source date, security name, and weight. The PowerStock funds are leveraged single-stock ETFs, so weights can exceed 100%; do not normalize them to 100% or treat them as conventional diversified ETF portfolios.
+This is a broad public snapshot, not a complete Global X master list. Canada’s full catalog page returned HTTP 403 to the earlier permitted retrieval attempt; Europe showed no catalog rows, Singapore exposed no product-level listing, and Japan was excluded after the official site notice restricted reproduction. The U.S. file has ticker-only entries. Each website entry links to an official regional catalog or fund page where known.
+
+## Holdings coverage and look-through method
+
+The Azure pipeline currently ingests raw HTML for AAPP, AMZP, GOOP, NVDP, SPCP, and TSLP into the private `bronze` container. A best-effort HTML parser and recursive calculator are included in the code. **The Azure Function and the parsing/ADF refresh step are not yet deployed**, so the current website has a clearly marked illustrative AAPP example and catalog-only statuses for other entries.
+
+Holdings are normalized as rows with a security ticker and weight percentage of parent NAV. For a nested ETF, exposure is multiplied down the path; repeated underlying securities are aggregated. Weights above 100% remain intact (for example, 133.54% is represented as 1.3354×). Cycles and unavailable fund holdings are reported as unresolved instead of guessed.
+
+## Azure architecture (no Databricks)
+
+```text
+Global X public holdings pages
+        | HTTPS
+        v
+Azure Data Factory Copy activity (deployed)
+        | timestamped raw HTML
+        v
+Azure Blob Storage / private bronze container
+        | future Function parser + recursive calculation
+        v
+logical silver normalized holdings -> gold look-through JSON
+        | public read-only API
+        v
+GitHub Pages website
+```
+
+The existing ADF pipeline is `pl_globalx_ingest`; its system-assigned managed identity is scoped to the `bronze` container. The next pipeline template and Azure Function code are in `adf/` and the repository root. They require a Function App deployment, narrowly scoped Function managed identity access to bronze, and ADF secure key wiring before live results are served.
+
+## Website
+
+The standalone experience is in `globalx-lookthrough/` in the personal website repository and has a different visual design from the portfolio. Set `window.GLOBALX_API_BASE` to the deployed Function API base ending in `/api` to enable live processed results.
 
 ## Run locally
 
@@ -20,30 +54,4 @@ python -m pip install -r requirements.txt
 python src/fetch_raw.py
 ```
 
-Raw snapshots are written under `data/bronze/<ticker>/` with a UTC timestamp in the filename. The manifest records source URL, fetch time, and SHA-256 checksum.
-
-## Azure architecture (without Databricks)
-
-```text
-Global X product pages
-        | HTTPS
-        v
-Azure Data Factory Copy activity
-        | HTTP GET (six product pages, sequential ForEach)
-        v
-ADLS Gen2 / Blob Storage
-bronze HTML snapshots partitioned by ticker and ingest date
-```
-
-The ADF artifacts are in `adf/`. The deployed `pl_globalx_ingest` pipeline runs a sequential `ForEach` and executes an HTTP Binary Copy for each official product page. It writes raw HTML under `bronze/holdings/<ticker>/ingest_date=YYYY-MM-DD/` using a UTC timestamped filename. This keeps the source payload unchanged for replay. The Data Factory uses a system-assigned managed identity; grant **Storage Blob Data Contributor** at the `bronze` container scope before running the pipeline. The local Python script remains a simple way to reproduce the same raw capture locally.
-
-This architecture demonstrates ingestion, orchestration, partitioned data-lake storage, managed identity, retries, and lineage without Databricks or a custom compute host. Azure rejected Databricks Trial SKU for this subscription and also does not support Functions Flex Consumption on this Free Trial subscription, so the pipeline uses ADF's native HTTP Copy activity.
-
-## GitHub and Azure deployment
-
-The source is in a private GitHub repository. The Azure Data Factory GitHub connection is not configured because its consent screen requested access to all repositories available to the account. ADF resources were published directly to the factory, and their JSON definitions are kept in `adf/`. Do not commit secrets or downloaded source snapshots. Keep subscription-specific values in deployment parameters, not source code.
-
-## Data use
-
-This project is for educational and interview demonstration purposes. Source pages state that holdings are subject to change. Every output should retain its source URL and source as-of date and should not be presented as investment advice.
-
+Do not commit secrets or raw downloaded pages. Keep source URL, catalog snapshot date, holdings as-of date, and ingestion time separate. This project is educational and not investment advice.
