@@ -1,8 +1,10 @@
+> Deployment status (2026-10-18): this Function-based refresh is a template. The deployed Canadian flow is `pl_globalx_canada_snapshot_sync`; see [CANADA_EXPANSION.md](CANADA_EXPANSION.md). Its source is a captured public snapshot, and Python analysis has been run in Azure Cloud Shell.
+
 # Public holdings refresh template
 
 This template is designed to run from Azure Data Factory after the Function App
 has been deployed. It processes the catalog entries that have a mapped official
-product URL in `src/catalog_data.json` (all 224 catalog entries with mapped official regional product pages).
+product URL in `src/catalog_data.json` (397 catalog entries with mapped official regional product pages).
 
 ## Flow
 
