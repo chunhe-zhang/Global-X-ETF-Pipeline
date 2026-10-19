@@ -1,0 +1,194 @@
+{
+  "subscription": "e31722f3-485e-4890-9d12-daafec3b8516",
+  "resource_group": "rg-globalx-etf-dev-01",
+  "factory": "adf-globalx-etf-dev-01",
+  "resources": [
+    {
+      "kind": "linkedservices",
+      "name": "ls_http_globalx_github_snapshot",
+      "properties": {
+        "type": "HttpServer",
+        "typeProperties": {
+          "url": "https://raw.githubusercontent.com/",
+          "enableServerCertificateValidation": true,
+          "authenticationType": "Anonymous"
+        }
+      }
+    },
+    {
+      "kind": "linkedservices",
+      "name": "ls_adls_globalx_canada",
+      "properties": {
+        "type": "AzureBlobFS",
+        "typeProperties": {
+          "url": "https://stglobalxetfdev01.dfs.core.windows.net"
+        }
+      }
+    },
+    {
+      "kind": "datasets",
+      "name": "ds_http_globalx_canada_snapshot",
+      "properties": {
+        "linkedServiceName": {
+          "referenceName": "ls_http_globalx_github_snapshot",
+          "type": "LinkedServiceReference"
+        },
+        "parameters": {
+          "relativeUrl": {
+            "type": "String"
+          }
+        },
+        "type": "Binary",
+        "typeProperties": {
+          "location": {
+            "type": "HttpServerLocation",
+            "relativeUrl": {
+              "value": "@dataset().relativeUrl",
+              "type": "Expression"
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "datasets",
+      "name": "ds_adls_globalx_canada_snapshot",
+      "properties": {
+        "linkedServiceName": {
+          "referenceName": "ls_adls_globalx_canada",
+          "type": "LinkedServiceReference"
+        },
+        "parameters": {
+          "directory": {
+            "type": "String"
+          },
+          "fileName": {
+            "type": "String"
+          }
+        },
+        "type": "Binary",
+        "typeProperties": {
+          "location": {
+            "type": "AzureBlobFSLocation",
+            "fileSystem": "bronze",
+            "folderPath": {
+              "value": "@dataset().directory",
+              "type": "Expression"
+            },
+            "fileName": {
+              "value": "@dataset().fileName",
+              "type": "Expression"
+            }
+          }
+        }
+      }
+    },
+    {
+      "kind": "pipelines",
+      "name": "pl_globalx_canada_snapshot_sync",
+      "properties": {
+        "description": "Copy verified Canadian source, normalized and look-through snapshots from a pinned GitHub revision to bronze. Does not fetch fresh issuer holdings or execute the analysis engine.",
+        "parameters": {
+          "revision": {
+            "type": "String",
+            "defaultValue": "main"
+          },
+          "files": {
+            "type": "Array",
+            "defaultValue": [
+              {
+                "source": "data/canada-source.json",
+                "directory": "raw/catalog/CA",
+                "fileName": "canada-source.json"
+              },
+              {
+                "source": "data/canada-normalized.json",
+                "directory": "silver/holdings/CA",
+                "fileName": "snapshot.json"
+              },
+              {
+                "source": "data/canada-lookthrough.json",
+                "directory": "gold/lookthrough/CA",
+                "fileName": "snapshot.json"
+              },
+              {
+                "source": "catalog.json",
+                "directory": "gold",
+                "fileName": "catalog.json"
+              }
+            ]
+          }
+        },
+        "activities": [
+          {
+            "name": "SyncCanadaSnapshots",
+            "type": "ForEach",
+            "typeProperties": {
+              "items": {
+                "value": "@pipeline().parameters.files",
+                "type": "Expression"
+              },
+              "isSequential": true,
+              "activities": [
+                {
+                  "name": "CopyVerifiedSnapshot",
+                  "type": "Copy",
+                  "policy": {
+                    "timeout": "0.01:00:00",
+                    "retry": 2,
+                    "retryIntervalInSeconds": 30,
+                    "secureOutput": false,
+                    "secureInput": false
+                  },
+                  "typeProperties": {
+                    "source": {
+                      "type": "BinarySource",
+                      "storeSettings": {
+                        "type": "HttpReadSettings",
+                        "requestMethod": "GET"
+                      }
+                    },
+                    "sink": {
+                      "type": "BinarySink",
+                      "storeSettings": {
+                        "type": "AzureBlobFSWriteSettings"
+                      }
+                    }
+                  },
+                  "inputs": [
+                    {
+                      "referenceName": "ds_http_globalx_canada_snapshot",
+                      "type": "DatasetReference",
+                      "parameters": {
+                        "relativeUrl": {
+                          "value": "@concat('chunhe-zhang/Personal-Website/',pipeline().parameters.revision,'/globalx-lookthrough/',item().source)",
+                          "type": "Expression"
+                        }
+                      }
+                    }
+                  ],
+                  "outputs": [
+                    {
+                      "referenceName": "ds_adls_globalx_canada_snapshot",
+                      "type": "DatasetReference",
+                      "parameters": {
+                        "directory": {
+                          "value": "@item().directory",
+                          "type": "Expression"
+                        },
+                        "fileName": {
+                          "value": "@item().fileName",
+                          "type": "Expression"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

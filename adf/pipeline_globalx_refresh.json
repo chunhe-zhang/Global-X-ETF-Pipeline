@@ -889,7 +889,211 @@
           },
           {
             "region": "CA",
+            "ticker": "ACHP"
+          },
+          {
+            "region": "CA",
+            "ticker": "AGCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "AGGX"
+          },
+          {
+            "region": "CA",
+            "ticker": "AIQ"
+          },
+          {
+            "region": "CA",
             "ticker": "AMZP"
+          },
+          {
+            "region": "CA",
+            "ticker": "BCCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "BCCC.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "BCCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "BCCL.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "BKCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "BKCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "BNKL"
+          },
+          {
+            "region": "CA",
+            "ticker": "CANL"
+          },
+          {
+            "region": "CA",
+            "ticker": "CASH"
+          },
+          {
+            "region": "CA",
+            "ticker": "CASH.L"
+          },
+          {
+            "region": "CA",
+            "ticker": "CBIL"
+          },
+          {
+            "region": "CA",
+            "ticker": "CBIL.L"
+          },
+          {
+            "region": "CA",
+            "ticker": "CBIL.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "CHPS"
+          },
+          {
+            "region": "CA",
+            "ticker": "CHPS.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "CHQQ"
+          },
+          {
+            "region": "CA",
+            "ticker": "CMCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "CMCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "CNCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "CNCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "CNDC"
+          },
+          {
+            "region": "CA",
+            "ticker": "CNDX"
+          },
+          {
+            "region": "CA",
+            "ticker": "COMX"
+          },
+          {
+            "region": "CA",
+            "ticker": "COPP"
+          },
+          {
+            "region": "CA",
+            "ticker": "CPCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "DIVY"
+          },
+          {
+            "region": "CA",
+            "ticker": "DIVY.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "DLR"
+          },
+          {
+            "region": "CA",
+            "ticker": "DLR.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "DRAM"
+          },
+          {
+            "region": "CA",
+            "ticker": "EACC"
+          },
+          {
+            "region": "CA",
+            "ticker": "EACL"
+          },
+          {
+            "region": "CA",
+            "ticker": "EAFX"
+          },
+          {
+            "region": "CA",
+            "ticker": "EAFX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "EMCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "EMCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "EMMX"
+          },
+          {
+            "region": "CA",
+            "ticker": "EMMX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "ENCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "ENCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "EQCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "EQCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "ETHI"
+          },
+          {
+            "region": "CA",
+            "ticker": "GCIG"
+          },
+          {
+            "region": "CA",
+            "ticker": "GLCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "GLCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "GLDX"
           },
           {
             "region": "CA",
@@ -897,7 +1101,387 @@
           },
           {
             "region": "CA",
+            "ticker": "GRCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "HAB"
+          },
+          {
+            "region": "CA",
+            "ticker": "HAC"
+          },
+          {
+            "region": "CA",
+            "ticker": "HAD"
+          },
+          {
+            "region": "CA",
+            "ticker": "HAF"
+          },
+          {
+            "region": "CA",
+            "ticker": "HAL"
+          },
+          {
+            "region": "CA",
+            "ticker": "HAZ"
+          },
+          {
+            "region": "CA",
+            "ticker": "HBAL"
+          },
+          {
+            "region": "CA",
+            "ticker": "HBB"
+          },
+          {
+            "region": "CA",
+            "ticker": "HBGD"
+          },
+          {
+            "region": "CA",
+            "ticker": "HBGD.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HBNK"
+          },
+          {
+            "region": "CA",
+            "ticker": "HCON"
+          },
+          {
+            "region": "CA",
+            "ticker": "HCRE"
+          },
+          {
+            "region": "CA",
+            "ticker": "HEQL"
+          },
+          {
+            "region": "CA",
+            "ticker": "HEQT"
+          },
+          {
+            "region": "CA",
+            "ticker": "HEWB"
+          },
+          {
+            "region": "CA",
+            "ticker": "HFR"
+          },
+          {
+            "region": "CA",
+            "ticker": "HGRW"
+          },
+          {
+            "region": "CA",
+            "ticker": "HGY"
+          },
+          {
+            "region": "CA",
+            "ticker": "HLIT"
+          },
+          {
+            "region": "CA",
+            "ticker": "HLPR"
+          },
+          {
+            "region": "CA",
+            "ticker": "HMMJ"
+          },
+          {
+            "region": "CA",
+            "ticker": "HMMJ.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HMP"
+          },
+          {
+            "region": "CA",
+            "ticker": "HPR"
+          },
+          {
+            "region": "CA",
+            "ticker": "HSAV"
+          },
+          {
+            "region": "CA",
+            "ticker": "HSH"
+          },
+          {
+            "region": "CA",
+            "ticker": "HSUV.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HTB"
+          },
+          {
+            "region": "CA",
+            "ticker": "HTB.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HUC"
+          },
+          {
+            "region": "CA",
+            "ticker": "HUG"
+          },
+          {
+            "region": "CA",
+            "ticker": "HULC"
+          },
+          {
+            "region": "CA",
+            "ticker": "HULC.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HUN"
+          },
+          {
+            "region": "CA",
+            "ticker": "HURA"
+          },
+          {
+            "region": "CA",
+            "ticker": "HUZ"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXCN"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXDM"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXDM.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXE"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXEM"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXF"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXH"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXQ"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXQ.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXS"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXS.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXT"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXT.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "HXX"
+          },
+          {
+            "region": "CA",
+            "ticker": "HYBR"
+          },
+          {
+            "region": "CA",
+            "ticker": "INOC"
+          },
+          {
+            "region": "CA",
+            "ticker": "KORX"
+          },
+          {
+            "region": "CA",
+            "ticker": "KORX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "LPAY"
+          },
+          {
+            "region": "CA",
+            "ticker": "LPAY.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "MART"
+          },
+          {
+            "region": "CA",
+            "ticker": "MEDX"
+          },
+          {
+            "region": "CA",
+            "ticker": "MPAY"
+          },
+          {
+            "region": "CA",
+            "ticker": "MPAY.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "MTRX"
+          },
+          {
+            "region": "CA",
+            "ticker": "NRGY"
+          },
+          {
+            "region": "CA",
             "ticker": "NVDP"
+          },
+          {
+            "region": "CA",
+            "ticker": "NYSX"
+          },
+          {
+            "region": "CA",
+            "ticker": "NYSX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "ORBX"
+          },
+          {
+            "region": "CA",
+            "ticker": "PAVE"
+          },
+          {
+            "region": "CA",
+            "ticker": "PAVE.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "PAYL"
+          },
+          {
+            "region": "CA",
+            "ticker": "PAYM"
+          },
+          {
+            "region": "CA",
+            "ticker": "PAYS"
+          },
+          {
+            "region": "CA",
+            "ticker": "PPLN"
+          },
+          {
+            "region": "CA",
+            "ticker": "QQCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "QQCC.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "QQCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "QQQL"
+          },
+          {
+            "region": "CA",
+            "ticker": "QQQX"
+          },
+          {
+            "region": "CA",
+            "ticker": "QQQX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "RBOT"
+          },
+          {
+            "region": "CA",
+            "ticker": "RBOT.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "REIT"
+          },
+          {
+            "region": "CA",
+            "ticker": "RING"
+          },
+          {
+            "region": "CA",
+            "ticker": "RNCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "RNCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "RSCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "RSCC.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "RSCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "RSSX"
+          },
+          {
+            "region": "CA",
+            "ticker": "RSSX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "SAFE"
+          },
+          {
+            "region": "CA",
+            "ticker": "SHLD"
+          },
+          {
+            "region": "CA",
+            "ticker": "SLVX"
+          },
+          {
+            "region": "CA",
+            "ticker": "SPAY"
+          },
+          {
+            "region": "CA",
+            "ticker": "SPAY.U"
           },
           {
             "region": "CA",
@@ -905,7 +1489,115 @@
           },
           {
             "region": "CA",
+            "ticker": "SVCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "SVCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "TLTX"
+          },
+          {
+            "region": "CA",
+            "ticker": "TLTX.F"
+          },
+          {
+            "region": "CA",
+            "ticker": "TLTX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "TMTX"
+          },
+          {
+            "region": "CA",
+            "ticker": "TMTX.F"
+          },
+          {
+            "region": "CA",
+            "ticker": "TMTX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "TOKN"
+          },
+          {
+            "region": "CA",
             "ticker": "TSLP"
+          },
+          {
+            "region": "CA",
+            "ticker": "TSTX"
+          },
+          {
+            "region": "CA",
+            "ticker": "TSTX.F"
+          },
+          {
+            "region": "CA",
+            "ticker": "TSTX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "TTTX"
+          },
+          {
+            "region": "CA",
+            "ticker": "UBIL.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "UBIL.V"
+          },
+          {
+            "region": "CA",
+            "ticker": "UBNK"
+          },
+          {
+            "region": "CA",
+            "ticker": "UCSH.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "UCSH.V"
+          },
+          {
+            "region": "CA",
+            "ticker": "UMRT"
+          },
+          {
+            "region": "CA",
+            "ticker": "URCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "USCC"
+          },
+          {
+            "region": "CA",
+            "ticker": "USCC.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "USCL"
+          },
+          {
+            "region": "CA",
+            "ticker": "USSL"
+          },
+          {
+            "region": "CA",
+            "ticker": "USSX"
+          },
+          {
+            "region": "CA",
+            "ticker": "USSX.U"
+          },
+          {
+            "region": "CA",
+            "ticker": "UTIL"
           }
         ]
       }
